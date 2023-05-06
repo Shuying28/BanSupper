@@ -203,6 +203,7 @@ body {
 }
 
 .input-container {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -210,8 +211,25 @@ body {
 
 .container{
   margin-top: 50px;
-  height: 50vh;
+  height: 125vh;
   width: 1400px;
   border-radius: 80px 80px 0 0;
   background-color: #2B2B3B;
 }
+
+.hide{
+  display: none;
+}
+
+.searchIcon {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 570px;
+  margin: auto;
+  background-color: transparent;
+  border-style: none;
+  cursor: pointer;
+}
+
+

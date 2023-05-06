@@ -52,26 +52,99 @@
   <div class="title-container mb-5">
     <h1>Investment Suggestion</h1>
   </div>
-  <form action="/action_page.php">
-    <p>Paste the startup url here:</p>
-    <div class="input-container mb-4">
-      <input
-        type="text"
-        class="form-control input"
-        name="Startup-name"
-        value=""
-      />
+  <div class="row mb-4">
+    <div class="input-container">
+      <div class="search">
+        <input
+          type="text"
+          class="form-control input"
+          name="Startup-name"
+          value=""
+        />
+        <button class="searchIcon">
+          <i class="bi bi-search"></i>
+        </button>
+      </div>
     </div>
-    
-  </form>
+  </div>
 
   <div class="container">
-    
+    <div>
+      <p class="decs-container" style="padding: 5%; text-align: justify;">&nbsp &nbsp &nbsp &nbsp An investment suggestion is a recommendation or advice given to an investor or group of investors 
+        about a specific investment opportunity. This suggestion typically includes information about the investment opportunity,
+        its potential risks and returns, and the recommended course of action for the investor.<br>
+        <br>
+        &nbsp &nbsp &nbsp &nbsp Investment suggestions can be made by a variety of sources, including financial advisors, investment managers, 
+        and other professionals who specialize in financial analysis and investing. These suggestions may be based on 
+        various types of investment vehicles, such as stocks, bonds, mutual funds, exchange-traded funds (ETFs), real estate, 
+        or alternative investments such as commodities, hedge funds, or private equity.<br>
+        <br>
+         &nbsp &nbsp &nbsp &nbsp An investment suggestion is usually based on a detailed analysis of the investment opportunity and is tailored to the
+         specific needs and goals of the investor. The suggestion may include recommendations on how much to invest, the time 
+         horizon for the investment, the level of risk involved, and the potential return on investment. The ultimate decision 
+         to invest or not to invest in a particular opportunity rests with the investor, who must evaluate the suggestion based 
+         on their own financial situation and investment objectives.</p>
+    </div>
+    <div class="chart-container hide">
+    <div class="row">
+      <div class="col">
+        <img src="../images/purpleChart.svg" alt="" width="450px" style="margin-left: 22%; margin-top: 12%; margin-right: 5%;">
+      </div>
+      <div class="col">
+        <img src="../images/barchart.svg" alt="" width="450px" style="margin-left: 8%; margin-top: 12%; margin-right: 5%;">
+      </div>
+    </div>
+      <div class="row">
+      <div class="col">
+        <img src="../images/bluechart.png" alt="" width="450px" style="margin-left: 22%; margin-top: 8%; margin-right: 5%;">
+      </div>
+      <div class="col">
+        <img src="../images/pinkChart.png" alt="" width="450px" style="margin-left: 8%; margin-top: 8%; margin-right: 5%;">
+      </div>
+    </div>
+  </div>
+    </div>
   </div>
   
   
+  <script>
+  //change color when the input is focused
+  const input = document.querySelector('.input');
+  const searchBtn = document.querySelector('.bi-search');
 
-  <script type="text/javascript" src=""></script>
+  input.addEventListener('focus', () => {
+    searchBtn.style.color = 'black';
+  });
+
+  input.addEventListener('blur', () => {
+    searchBtn.style.color = '';
+  });
+
+
+    const searchIcon = document.querySelector('.searchIcon');
+    const inputContainer = document.querySelector('.input-container');
+    const chartContainer = document.querySelector('.chart-container');
+    const decsContainer = document.querySelector('.decs-container');
+
+  input.addEventListener('input', function() {
+    searchIcon.addEventListener('click', function() {
+      if (input.value !== '') {
+        chartContainer.style.display = 'block';
+        decsContainer.style.display = 'none';
+      } 
+    });
+  });
+
+input.addEventListener('input', function() {
+  if (this.value == '') {
+    chartContainer.style.display = 'none';
+    decsContainer.style.display = 'block';
+  }
+});
+
+
+
+  </script>
 
 </body>
 
