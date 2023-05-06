@@ -209,9 +209,16 @@ h2{
 
 
 p {
-  color: #111; 
+  color: #fff; 
   font-family: 'Calibri', sans-serif; 
   font-size: 25px; 
+  line-height: 1.5;
+}
+
+footer p {
+  color: #fff; 
+  font-family: 'Calibri', sans-serif; 
+  font-size: small; 
   line-height: 1.5;
 }
 
